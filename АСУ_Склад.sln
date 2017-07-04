@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "АСУ_Склад(ASP.NET Application)", "ASP.NET\АСУ_Склад(ASP.NET Application).csproj", "{CF2CBABF-851C-452F-82AB-21E14446F364}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "АСУ_Склад(Objects)", "Objects\АСУ_Склад(Objects).csproj", "{631CA123-9527-465C-B7DE-DDE6EAAF6E98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|Any CPU = Debug|Any CPU
+Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF2CBABF-851C-452F-82AB-21E14446F364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2CBABF-851C-452F-82AB-21E14446F364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2CBABF-851C-452F-82AB-21E14446F364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2CBABF-851C-452F-82AB-21E14446F364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{631CA123-9527-465C-B7DE-DDE6EAAF6E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{631CA123-9527-465C-B7DE-DDE6EAAF6E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{631CA123-9527-465C-B7DE-DDE6EAAF6E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{631CA123-9527-465C-B7DE-DDE6EAAF6E98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
