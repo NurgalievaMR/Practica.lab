@@ -35,8 +35,10 @@ namespace IIS.АСУ_Склад
             "Цена as \'Цена\'",
             "Сумма as \'Сумма\'",
             "Товар as \'Товар\'",
-            "Товар.Название as \'Название\'"}, Hidden=new string[] {
-            "Товар.Название"})]
+            "Товар.Название as \'Название\'"}, 
+            Hidden=new string[] { "Товар.Название",   "Заказ"}
+         )
+    ]
     [MasterViewDefineAttribute("ЗаписьВНакладнойE", "Товар", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Название")]
     public class ЗаписьВНакладной : ICSSoft.STORMNET.DataObject
     {

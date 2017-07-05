@@ -34,7 +34,8 @@ namespace IIS.АСУ_Склад
             "ЦенаСНалогами as \'Цена с налогами\'",
             "Сумма as \'Сумма\'",
             "Товар as \'Товар\'",
-            "Товар.Название as \'Название\'"}, Hidden=new string[] {
+            "Товар.Название as \'Название\'", 
+            "Товар.Цена as \'Цена\'"}, Hidden = new string[] {
             "Товар.Название"})]
     [MasterViewDefineAttribute("СтрокаЗаказаE", "Товар", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Название")]
     public class СтрокаЗаказа : ICSSoft.STORMNET.DataObject
@@ -77,7 +78,11 @@ namespace IIS.АСУ_Склад
             set
             {
                 // *** Start programmer edit section *** (СтрокаЗаказа.Количество Set start)
-
+                if (value < 0)
+                {
+                    Exception ex = new Exception("Значение количества не может быть отрицательным");
+                    throw ex;
+                }
                 // *** End programmer edit section *** (СтрокаЗаказа.Количество Set start)
                 this.fКоличество = value;
                 // *** Start programmer edit section *** (СтрокаЗаказа.Количество Set end)
@@ -92,28 +97,24 @@ namespace IIS.АСУ_Склад
         // *** Start programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами CustomAttributes)
 
         // *** End programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами CustomAttributes)
+        [ICSSoft.STORMNET.NotStored()]
         public virtual double ЦенаСНалогами
         {
             get
             {
-                // *** Start programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Get start)
-
-                // *** End programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Get start)
-                double result = this.fЦенаСНалогами;
-                // *** Start programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Get end)
-
-                // *** End programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Get end)
-                return result;
+                // *** Start programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Get)
+                Double ценасналогами = 0;
+                if (Товар != null && Товар.Цена > 0)
+                {
+                    ценасналогами = Товар.Цена * 1.35;
+                }
+                return ценасналогами;
+                // *** End programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Get)
             }
             set
             {
-                // *** Start programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Set start)
-
-                // *** End programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Set start)
-                this.fЦенаСНалогами = value;
-                // *** Start programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Set end)
-
-                // *** End programmer edit section *** (СтрокаЗаказа.ЦенаСНалогами Set end)
+                // *** Start programmer edit section *** (СтрокаЗаказа.Сумма Set)
+                // *** End programmer edit section *** (СтрокаЗаказа.Сумма Set)
             }
         }
         
@@ -123,28 +124,24 @@ namespace IIS.АСУ_Склад
         // *** Start programmer edit section *** (СтрокаЗаказа.Сумма CustomAttributes)
 
         // *** End programmer edit section *** (СтрокаЗаказа.Сумма CustomAttributes)
+        [ICSSoft.STORMNET.NotStored()]
         public virtual double Сумма
         {
             get
             {
-                // *** Start programmer edit section *** (СтрокаЗаказа.Сумма Get start)
-
-                // *** End programmer edit section *** (СтрокаЗаказа.Сумма Get start)
-                double result = this.fСумма;
-                // *** Start programmer edit section *** (СтрокаЗаказа.Сумма Get end)
-
-                // *** End programmer edit section *** (СтрокаЗаказа.Сумма Get end)
-                return result;
+                // *** Start programmer edit section *** (СтрокаЗаказа.Сумма Get)
+                Double сумма = 0;
+                if (Товар != null && Товар.Цена > 0)
+                {
+                    сумма = ЦенаСНалогами * Количество;
+                }
+                return сумма;
+                // *** End programmer edit section *** (СтрокаЗаказа.Сумма Get)
             }
             set
             {
-                // *** Start programmer edit section *** (СтрокаЗаказа.Сумма Set start)
-
-                // *** End programmer edit section *** (СтрокаЗаказа.Сумма Set start)
-                this.fСумма = value;
-                // *** Start programmer edit section *** (СтрокаЗаказа.Сумма Set end)
-
-                // *** End programmer edit section *** (СтрокаЗаказа.Сумма Set end)
+                // *** Start programmer edit section *** (СтрокаЗаказа.Сумма Set)
+                // *** End programmer edit section *** (СтрокаЗаказа.Сумма Set)
             }
         }
         

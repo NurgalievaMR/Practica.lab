@@ -170,15 +170,18 @@ namespace IIS.АСУ_Склад
             get
             {
                 // *** Start programmer edit section *** (Заказ.Цена Get)
-                return 0;
-                // *** End programmer edit section *** (Заказ.Цена Get)
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Заказ.Цена Set)
+		double цена = 0;
+		for (int i = 0; i < this.СтрокаЗаказа.Count; i++)
+			цена += (double)this.СтрокаЗаказа[i].Сумма;
+		return цена;
+		// *** End programmer edit section *** (Заказ.Цена Get)
+	}
+	set
+	{
+		// *** Start programmer edit section *** (Заказ.Цена Set)
 
-                // *** End programmer edit section *** (Заказ.Цена Set)
-            }
+		// *** End programmer edit section *** (Заказ.Цена Set)
+	}
         }
         
         /// <summary>

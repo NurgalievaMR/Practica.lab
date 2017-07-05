@@ -30,6 +30,7 @@ namespace IIS.АСУ_Склад
         /// </summary>
         protected override void Preload()
         {
+            
         }
 
         /// <summary>
