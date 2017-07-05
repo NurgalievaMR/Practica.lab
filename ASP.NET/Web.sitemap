@@ -13,8 +13,8 @@
       <siteMapNode title="Документ" description="" url="~/forms/Orders/DokumentL.aspx" />
       <siteMapNode title="Заказ" description="" url="~/forms/Orders/ZakazL.aspx" />
       <siteMapNode title="Игформация о заказах" roles="*">
-        <siteMapNode title="Документ" description="" url="~/forms/Orders/DokumentL.aspx469efb14-5ad4-4457-846a-1d36c6286ef6?rand=" />
-        <siteMapNode title="Заказ" description="" url="~/forms/Orders/ZakazL.aspxfaeb956a-9abc-4904-a9c3-c952fc123ca3?rand=" />
+        <siteMapNode title="Документ" description="" url="~/forms/Orders/DokumentL.aspxa7d026a0-b5a3-45ee-b129-814e5be2545a?rand=" />
+        <siteMapNode title="Заказ" description="" url="~/forms/Orders/ZakazL.aspxbf44f6d0-b224-47fd-871d-7bf21077948e?rand=" />
         <siteMapNode title="Накладная" description="" url="~/forms/Orders/NakladnayaL.aspx" />
       </siteMapNode>
       <siteMapNode title="Товары на складе" roles="*">
